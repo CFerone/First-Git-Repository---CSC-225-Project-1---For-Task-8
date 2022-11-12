@@ -1,0 +1,185 @@
+/* 
+    Use the website "https://jigsaw.w3.org/css-validator/#validate_by_input", to check for errors in the code
+    ALWAYS CHECK FOR ERRORS USING THE ONLINE VALIDATOR !!!
+*/
+
+/*
+    Courtney Ferone - Project #1
+
+    Design Direction:
+    YOU CANNOT USE BOOTSTRAP (OR ANY FRONTEND FRAMEWORK FOR THIS PROJECT).
+
+    All assignments must be submitted as a zip file through blackboard that contains all elements necessary (HTML, CSS, Images, etc).
+
+    Using HTML and CSS, create a personal website for yourself. The purpose of this site will be to act as a home page and portal and 
+    should show off both your HTML and CSS skills along with telling a little bit about you.
+
+    The site should have at least 3 pages. Each page should have navigation to get between each page.
+
+    You should use at least one CSS file that gets included in the head of every page.
+
+    There should be an HTML form on one of the pages of your site. It can be a contact form, an order form (for a fictitious product?) 
+    — be creative. Be sure to use at least 5 form INPUTS (input, textarea, select, etc). The form MUST validate (not all fields are 
+    required to validate).
+
+    The form has to submit the data using method GET and passthrough values on the URL upon submitting.
+*/
+
+
+/*
+
+    The below line must be added to the html file to reference this stylesheet: (must be located in the <head>   </head> tag)
+        <link href="css/form.css" rel="stylesheet">
+        link href="css/form.css": Tell the html file to reference the directory (folder) named css and use the form.css file
+        rel="stylesheet": Tell the html file the .css file is a stylesheet
+
+*/
+
+/*
+    Background: Set the color to a grey hue
+*/
+body {
+    background: #b6b6b6;
+}
+
+/*
+    Text-align: Center our text
+*/
+nav {
+    text-align: center;
+}
+
+/* 
+    Display: Center our navigation bar
+    Font-size: Increase the size of our text
+    Padding: Give extra space around each navigation link (top, right, bottom, left - goes clockwise)
+    Background-color: Black
+    Border-radius: Round our edges
+*/
+nav ul li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 14px 10px 14px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius:20px;
+}
+
+/* 
+    "nav a" only targets the anchors (links) in the navigation bar   
+    Text-decoration: Remove the default underline decoration
+    Color: Make text white  
+*/
+nav a {
+    text-decoration:none;
+    color: white;
+}
+/* 
+    "hover" means to add this decoration only when hovering 
+    Text-decoration: Add the underline decoration back when hovering
+*/
+nav a:hover {
+    text-decoration:underline;
+  }
+
+/*
+    Display: Treat this element as a block
+    Margin-left / Margin-right: Make both auto to center the element
+    Width: Use 45% of the block element's width
+    Height: Use 100% of the block element's height
+    Border-radius: Round our edges
+    Background-color: Set to a grey hue
+    Padding: Give space around the edges of the block element
+*/
+form {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 45%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px 25px 10px 25px; 
+}
+
+/*
+    Margin-left: Move our box to the left this amount
+    Width: Use 60% of the box element's width
+    Height: Use 100% of the box element's height
+    Text-align: Make our fields equal spacing by using right alignment
+*/
+.firstBox {
+    margin-left: 138px;
+    width:60%;
+    height:100%;
+    text-align: right;
+}
+
+/*
+    Text-align: Center our text
+    Margin: Make some space between our input fields
+    Width: Make the input fields 25% their total width
+    Min-Height: Adjust the height of the input fields (20px seems to be the max height without breaking the form)
+    Border: Define the size and color of the input field's border
+    Border-radius: Round our edges
+*/
+.personalInfo,.horrorSurvey,#first_name,#last_name,#email,#password,#repeat_password {
+    text-align: center;
+    margin: 5px;
+    width: 60%;
+    min-height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+}
+
+/*
+    Margin-top: Give some space between the two boxes
+    Text-align: Center the text
+*/
+.secondBox {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/*
+    Width: Use the full width of the block element's width
+    Background-color: Make the button a green hue
+    Color: Make text white
+    Padding: Define the size of the button
+    Margin: Make some space above our button
+    Border: Remove the default border on the button
+    Border-radius: Round our edges
+    Cursor: Make our cursor a pointer
+*/
+.submit {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    margin: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*
+    Background-color: Change to a different green hue when hovering
+*/
+.submit:hover {
+    background-color: #45a049;
+}
+
+
+/* 
+    Width: Use 100% of the block element's width
+    Height: Use only 30% of the block element's height
+    Position: Set this element's position absolutely (ignoring the positions of other siblings)
+    Bottom / Left / Right: Make sure the footer is perfectly centered at the very bottom of the page
+*/
+.footer {
+    width:100%;
+    height:30%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    right: 0;
+}

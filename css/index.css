@@ -1,0 +1,227 @@
+/* 
+    Use the website "https://jigsaw.w3.org/css-validator/#validate_by_input", to check for errors in the code
+    ALWAYS CHECK FOR ERRORS USING THE ONLINE VALIDATOR !!!
+*/
+
+/*
+    Courtney Ferone - Project #1
+
+    Design Direction:
+    YOU CANNOT USE BOOTSTRAP (OR ANY FRONTEND FRAMEWORK FOR THIS PROJECT).
+
+    All assignments must be submitted as a zip file through blackboard that contains all elements necessary (HTML, CSS, Images, etc).
+
+    Using HTML and CSS, create a personal website for yourself. The purpose of this site will be to act as a home page and portal and 
+    should show off both your HTML and CSS skills along with telling a little bit about you.
+
+    The site should have at least 3 pages. Each page should have navigation to get between each page.
+
+    You should use at least one CSS file that gets included in the head of every page.
+
+    There should be an HTML form on one of the pages of your site. It can be a contact form, an order form (for a fictitious product?) 
+    — be creative. Be sure to use at least 5 form INPUTS (input, textarea, select, etc). The form MUST validate (not all fields are 
+    required to validate).
+
+    The form has to submit the data using method GET and passthrough values on the URL upon submitting.
+*/
+
+
+/*
+
+    The below line must be added to the html file to reference this stylesheet: (must be located in the <head>   </head> tag)
+        <link href="css/index.css" rel="stylesheet">
+        link href="css/index.css": Tell the html file to reference the directory (folder) named css and use the index.css file
+        rel="stylesheet": Tell the html file the .css file is a stylesheet
+
+*/
+
+/* 
+    Background: Set the image for our body element's background
+    Background-size: Make the image span the whole page
+    Opacity: Make the image slightly transparent
+    Overflow: Hide our scrollbar if there is no need for it
+    Margin: Remove the default margins around the body element
+*/
+body {
+    background: url(../images/castle.jpg) no-repeat center fixed; 
+    background-size: cover;
+    opacity: 0.9;
+    overflow: hidden;
+    margin:0;
+   }
+
+/* 
+    Opacity: Make the image mostly transparent
+    Width / Height: Make the image span the entire body element box
+    Position: Set this image's position absolutely (ignoring the positions of other siblings)
+    Background: Places an animated overlay to cover the background
+    Border-radius: Round our edges
+    Margin: Remove the default margins around the animation
+*/
+.overlay {
+    opacity: 0.3;
+    width:100%;  
+    height:100%;  
+    position:absolute;
+    background: url("../images/rainfall.gif");
+    border-radius:20px;
+    margin:0;
+}
+
+/*
+    Text-align: Center our text
+*/
+nav {
+    text-align: center;
+}
+
+/* 
+    Display: Center our navigation bar
+    Font-size: Increase the size of our text
+    Padding: Give extra space around each navigation link (top, right, bottom, left - goes clockwise)
+    Background-color: Black
+    Border-radius: Round our edges
+*/
+nav ul li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 14px 10px 14px;
+    background-color:black;
+    border-radius:20px;
+}
+
+/* 
+    "nav a" only targets the anchors (links) in the navigation bar   
+    Text-decoration: Remove the default underline decoration
+    Color: Make text white  
+*/
+nav a {
+    text-decoration:none;
+    color: white;
+}
+/* 
+    "hover" means to add this decoration only when hovering 
+    Text-decoration: Add the underline decoration back when hovering
+*/
+nav a:hover {
+    text-decoration:underline;
+  }
+
+/* 
+    Background Color: Black with transparency
+    Width: Use only 44% of the block element's width
+    Margin-left / Margin-right: Make both auto to center the element
+    Color: Make text white
+    Position: Make relative to it's siblings above
+    Top: Move the element down from the top
+    Border-radius: Round our edges
+    Padding-left: Give the h1 text more space on the left side
+*/
+h1 {
+    background-color: rgba(0,0,0,0.5);
+    width: 44%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    position: relative;
+    top: 20px;
+    border-radius:20px;
+    padding-left:18px;
+}
+
+/* 
+    Background Color: Black with transparency
+    Width: Use only 51% of the block element's width
+    Margin-left / Margin-right: Make both auto to center the element
+    Color: Make text white
+    Font-size: Increase the size of our text
+    Position: Make relative to it's siblings above
+    Top: Move the element down from the top
+    Border-radius: Round our edges
+    Padding-left: Give the paragraph more space on the left side
+*/
+.paragraph {
+    background-color: rgba(0,0,0,0.5);
+    width: 51%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 25px;
+    position: relative; 
+    top:50px;
+    border-radius:20px;
+    padding-left:18px;
+}
+
+/*
+    Adding the anchor tag "a" in ".door a" allows our image to be a clickable link
+    Background: Set the image for our door class
+    Filter: Use the grayscale filter at 100% to make the image grey
+    Position: Set this element's position absolutely (ignoring the positions of other siblings)
+    Width: Only use 12% of the block element's width to make the image clickable and not extra space to the right of it
+    Height: Use the full height of the block
+    Top: Move the element down from the top by this amount
+    Left: Move the element from the left to the right by this amount
+*/
+.door a {
+    background:url("../images/doorClosed.PNG") no-repeat;
+    filter: grayscale(100%);
+    position: absolute;
+    width:12%;
+    height:100%;
+    top: 350px;
+    left: 702px;
+}
+
+/*
+    Effects of the image on hover
+    Adding the anchor tag "a" in ".door a" allows our image to be a clickable link on hover
+    Background: Set the image for our door class on hover
+    Filter: Use the grayscale filter at 100% to make the image grey
+    Position: Set this element's position absolutely (ignoring the positions of other siblings)
+    Width: Only use 12% of the block element's width to make the image clickable and not extra space to the right of it
+    Height: Use the full height of the block
+    Top: Move the element down from the top by this amount
+    Left: Move the element from the left to the right by this amount
+*/
+.door a:hover {
+    background:url("../images/doorOpen.PNG") no-repeat;
+    filter: grayscale(100%);
+    position: absolute;
+    width:12%;
+    height:100%;
+    top: 350px;
+    left: 702px;
+}
+
+/* 
+    Color: Make text white
+    Font-size: Increase the size of our text
+    Position: Set this element's position absolutely (ignoring the positions of other siblings)
+    Bottom: Move the element up from the bottom by this amount
+    Left: Move the element from the left to the right by this amount
+    Text-decoration: Remove the default underline decoration 
+*/
+.enter {
+    color: white;
+    font-size: 25px;
+    position:absolute;
+    bottom: 225px;
+    left: 712px;
+    text-decoration:none;
+}
+
+/* 
+    Width: Use the full width of the block
+    Height: Use only 30% of the block element's height
+    Position: Set this element's position absolutely (ignoring the positions of other siblings)
+    Bottom / Left / Right: Make sure the footer is perfectly centered at the very bottom of the page
+*/
+.footer {
+    width:100%;
+    height:30%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    right: 0;
+}

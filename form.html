@@ -1,0 +1,178 @@
+<!-- Use the website "https://validator.w3.org/#validate_by_input", to check for errors in the code -->
+<!-- ALWAYS CHECK FOR ERRORS USING THE ONLINE VALIDATOR !!! -->
+
+<!-- Courtney Ferone - Project #1 -->
+
+<!DOCTYPE html> <!-- Defines the document to be HTML  -->
+<html lang="en"> <!-- The beginning of our code, attribute "lang" is added to define the language of the page to be "en(English)" -->
+    <head> <!-- The elements in the "head" node/tag do NOT appear under the URL on the page. 
+                It appears as the name of the page (shown on the tab) -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="css/form.css" rel="stylesheet">
+        <title>Let's Connect</title>
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <ul>
+                <!-- Adding the attribute 'target="_blank"' means "open this link in a new tab" -->
+                <!-- You MUST add the attribute 'rel="noopener noreferrer"' to a "target" attribute to make the link secure -->
+                  <li><a href="index.html" target="_blank" rel="noopener noreferrer">Origin</a></li>
+                  <li><a href="about.html" target="_blank" rel="noopener noreferrer">Seek</a></li>
+                  <li><a href="form.html" target="_blank" rel="noopener noreferrer">Coalesce</a></li>
+                </ul>
+              </nav>
+        </header>
+
+        <!-- Creating a form -->
+        <form method="get"> <!-- The method attribute MUST ="post" in order to securely capture the input from the user 
+                                "post" will not run on the live server (can use "get" to see the page but MUST SWITCH BACK to "post"
+                                ** leaving the method attribute blank is the same as writing "get" ** -->
+            <fieldset class="firstBox"> <!-- The <fieldset> tag can be used to "disable" things from the form
+                            example: <fieldset disable=""> -->
+                <!-- The <legend> tag acts as a title for the form and wraps around it -->
+                <legend class="personalInfo"> Personal Information </legend>
+                    <!-- The LABEL must always match with the ID of the input -->
+                    <label for="first_name">First Name*:</label>
+                    <!-- The type "text" accepts text from the user -->
+                    <!-- "placeholder" shows in the label before the user types in it (greyed out) -->
+                    <!-- "value" also shows in the label before the user types in it, but as actual input
+                         ex: value="john.doe@gmail.com" -->
+                    <!-- "required" forces the user to put information in the form in order to submit and proceed -->
+                    <input type="text" 
+                    id="first_name" 
+                    name="first_name" 
+                    placeholder="Your first name" 
+                    required>
+                    <br>
+                    <label for="last_name">Last Name*:</label>
+                    <input type="text" 
+                    id="last_name" 
+                    name="last_name" 
+                    placeholder="Your last name" 
+                    required>
+                    <br>
+                    <!-- The type "email" accepts an email from the user, it expects an @ symbol -->
+                    <label for="email">Email Address*:</label>
+                    <input type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Your email address" 
+                    required>
+                    <br>
+                    <!-- The type "password" accepts a password from the user and is hidden -->
+                    <label for="password">Password input*:</label>
+                    <input type="password" 
+                    id="password" 
+                    name="password" 
+                    required>
+                    <br>
+                    <label for="repeat_password">Repeat password*:</label>
+                    <input type="password" 
+                    id="repeat_password" 
+                    name="repeat_password" 
+                    required>
+            </fieldset>
+
+
+            <fieldset class="secondBox">
+                <legend class="horrorSurvey"> Your Interests </legend>
+                How Much You Like Horror Films
+                        <!-- Type "radio" is similar to "checkbox" but only allows ONE choice -->
+                        <!-- "name" MUST be the same for all options so they are included in the same field of choice -->
+                        <!-- In this scenario, "value" is defined instead if using the default which is "on" -->
+                        <input type="radio" 
+                        id="rating1" 
+                        name="horrorRating"
+                        value="rating1">
+                        <label for="rating1">1 Star</label>
+
+                        <input type="radio" 
+                        id="rating2" 
+                        name="horrorRating"
+                        value="rating2">
+                        <label for="rating2">2 Stars</label>
+
+                        <input type="radio" 
+                        id="rating3" 
+                        name="horrorRating"
+                        value="rating3">
+                        <label for="rating3">3 Stars</label>
+
+                        <input type="radio" 
+                        id="rating4" 
+                        name="horrorRating"
+                        value="rating4">
+                        <label for="rating4">4 Stars</label>
+
+                        <input type="radio" 
+                        id="rating5" 
+                        name="horrorRating"
+                        value="rating5">
+                        <label for="rating5">5 Stars</label>
+                    <br>
+
+                    <!-- Since this <select> tag is NOT a "multiple" selection, the label will appear as a dropdown menu-->
+                    <!-- <option value="">-- Select --</option> MUST BE INCLUDED to REQUIRE the user to choose an option -->
+                    <label for="favoriteAuthor">Favorite Author of Horror Novels *:</label>
+                    <select
+                        id="favoriteAuthor" 
+                        name="favoriteAuthor"
+                        required>
+                            <option value="">- - Select - -</option>
+                            <option value="stephenKing">Stephen King</option>
+                            <option value="hpLovecraft">H. P. Lovecraft</option>
+                            <option value="shirleyJackson">Shirley Jackson</option>
+                    </select>
+                    <br>
+
+                    <label for="films">Favorite Genre of Film (You can select multiple genres) *:</label>
+                    <!-- The tag <select> allows the user to choose an option from a menu -->
+                    <!-- The "multiple" attribute specifies that multiple options can be selected at once -->
+                    <select 
+                        multiple
+                        id="films"
+                        name="films"
+                        required>
+                            <option value="Horror">Horror</option>
+                            <option value="sciFi">Sci-Fi</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Action">Action</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Thriller">Thriller</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Documentay">Documentary</option>
+                    </select>
+                    <br>
+
+                    <!-- Putting the INPUT before the LABEL when using a CHECKBOX type is visually more appealing -->
+                    <!-- We define value="1" because the default value being passed in "checkbox" is "on" and "1" makes more sense -->
+                    <input type="checkbox" 
+                    id="subscribe" 
+                    name="subscribe"
+                    value="1">
+                    <label for="subscribe">Add me to your mailing list for all things horror !</label>
+            </fieldset>
+
+                * Required
+                <!-- The input type "submit" accepts the information from the form -->
+                <!-- "value" allows you to change the name of the "submit" button
+                    ex: value="click this thing" -->
+                <input class="submit" type="submit" value="Submit">
+        </form>
+
+
+        <footer>
+            <img class="footer"
+            src="images/footer.png"
+            alt="Happy Halloween Footer Image">
+        </footer>
+
+    </body>
+
+</html>

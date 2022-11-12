@@ -1,0 +1,78 @@
+<!-- Use the website "https://validator.w3.org/#validate_by_input", to check for errors in the code -->
+<!-- ALWAYS CHECK FOR ERRORS USING THE ONLINE VALIDATOR !!! -->
+
+<!-- Courtney Ferone - Project #1 -->
+
+<!DOCTYPE html> <!-- Defines the document to be HTML  -->
+<html lang="en"> <!-- The beginning of our code, attribute "lang" is added to define the language of the page to be "en(English)" -->
+    <head> <!-- The elements in the "head" node/tag do NOT appear under the URL on the page. 
+                It appears as the name of the page (shown on the tab) -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="css/about.css" rel="stylesheet">
+        <title>Her Tale</title>
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <ul>
+                <!-- Adding the attribute 'target="_blank"' means "open this link in a new tab" -->
+                <!-- You MUST add the attribute 'rel="noopener noreferrer"' to a "target" attribute to make the link secure -->
+                  <li><a href="index.html" target="_blank" rel="noopener noreferrer">Origin</a></li>
+                  <li><a href="about.html" target="_blank" rel="noopener noreferrer">Seek</a></li>
+                  <li><a href="form.html" target="_blank" rel="noopener noreferrer">Coalesce</a></li>
+                </ul>
+              </nav>
+        </header>
+
+        <!-- The below <div class>'s are used to define the container and make sure the footer is placed at the absoulte bottom of it -->
+        <div class="pageContainer">
+        <div class="contentWrap">
+        
+        <!-- This below <div class> houses my overlay in the .css file -->
+        <div class="overlay"></div>
+
+
+        <h1> A Little Bit About Me </h1>
+
+        <div class="paragraph">
+            <p>
+                My name is Courtney Ferone, and it if wasn't painfully obvious... I'm a big fan of all things 
+                <img class="horror" src="images/horror.png"
+                alt="Horror Word Image">. 
+            </p>
+        </div>
+
+        <div class="favoriteHorrorMovies">
+                <p>
+                    My top 3 Favorite Horror Films:
+                </p>
+                <a href="https://www.imdb.com/title/tt0259153/" target="_blank" rel="noopener noreferrer">
+                    <img class="moviePosters" src="images/roseRed.jpg" alt="Rose Red Movie Poster"> </a>
+                <a href="https://www.imdb.com/title/tt5606664/" target="_blank" rel="noopener noreferrer">
+                    <img class="moviePosters" src="images/doctorSleep.jpg" alt="Doctor Sleep Movie Poster"> </a>
+                <a href="https://www.imdb.com/title/tt2870612/" target="_blank" rel="noopener noreferrer">
+                    <img class="moviePosters" src="images/asAboveSoBelow.jpg" alt="As Above So Below Movie Poster"> </a>
+                </div>
+
+        <div class="contactFormDirect">
+            <p>
+                Do you also like all things Spooky ?! Head over to my
+                <a href="form.html" target="_blank" rel="noopener noreferrer"> contact page</a> and tell me all about it.
+            </p>
+        </div>
+
+        </div>
+        <footer>
+            <img class="footer"
+            src="images/footer.png"
+            alt="Happy Halloween Footer Image">
+        </footer>
+        </div>
+
+    </body>
+
+</html>
